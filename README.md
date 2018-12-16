@@ -13,6 +13,7 @@ App developers need a way to test their changes in a holistic way. Infrastructur
 6. Once everything has been installed (and all recent version upgrades have been made), the cli should run the pre-defined set of e2e tests (located in some folder that can be configured) as a job in the k8s cluster.
 7. The results of each test (or job) should be tabulated via logs, and collected for later display to the user.
 8. The user should, after all the jobs have run, be able to see the output from the tests and see which ones passed and which ones did not.
+9. After all the tests are done running, the `cli` should delete the K8s cluster, so that you don't have to pay for it while no tests are being run.
 
 ## Implementation Details
 TBD.
