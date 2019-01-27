@@ -16,4 +16,9 @@ App developers need a way to test their changes in a holistic way. Infrastructur
 9. After all the tests are done running, the `cli` should delete the K8s cluster, so that you don't have to pay for it while no tests are being run.
 
 ## Implementation Details
-TBD.
+
+### Stage 1
+In this stage, I'm going to implement a circleci copy. It will do the following things:
+1. Have a web UI where you can submit a link to a github repo, a json config file that tells me how to setup your code and run your tests, and allows you to see the status of the jobs you have run.
+2. Have a backend system that accepts that input, launches the job as a new container either on top of knative or kubernetes (tbd), and reports back the success or failure of the job along with all the logs.
+3. Thats all folks :).
